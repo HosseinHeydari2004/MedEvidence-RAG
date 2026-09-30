@@ -36,3 +36,4 @@ python-multipart>=0.0.9
 streamlit>=1.38
 
 langchain-core
+pdfminer-six
