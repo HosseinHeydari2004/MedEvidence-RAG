@@ -5,6 +5,7 @@ python-dotenv>=1.0
 # Document loading
 langchain-community>=0.3
 langchain-text-splitters>=0.3
+markdown
 
 # PDF
 pymupdf>=1.24
