@@ -93,7 +93,7 @@ class BasePipelineLoader(ABC):
         """
         return cls._SUPPORTED_EXTENSIONS
 
-    def can_handle(self, path: pathlib.Path | str) -> bool:
+    def can_handle(self, cls,path: pathlib.Path | str) -> bool:
         """Determine whether this loader can handle the given path.
 
         The decision is based on the file extension of ``path`` compared,
@@ -109,9 +109,9 @@ class BasePipelineLoader(ABC):
         bool
             ``True`` if the path's extension is supported, ``False`` otherwise.
         """
-        return pathlib.Path(path).suffix.lower() in self.supported_extensions
+        return pathlib.Path(path).suffix.lower() in cls.supported_extensions()
 
-    def is_zip(self, path: pathlib.Path | str) -> bool:
+    def _is_zip(self, path: pathlib.Path | str) -> bool:
         """Check whether the given path has a ``.zip`` extension.
 
         The comparison is case-insensitive, so ``"archive.ZIP"`` is also
@@ -129,3 +129,13 @@ class BasePipelineLoader(ABC):
             ``False`` otherwise.
         """
         return pathlib.Path(path).suffix.lower() == ".zip"
+
+    def _load_directory(self, path: pathlib.Path | str) -> list[Document]:
+        path
+
+
+    def load_zip(self, path: pathlib.Path | str) -> list[Document]:
+        pass
+
+    def _load_file(self, path: pathlib.Path | str) -> list[Document]:
+        pass
