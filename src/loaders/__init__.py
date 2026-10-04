@@ -4,6 +4,7 @@ from .csv import CsvLoader
 from .text import TxtLoader
 from .markdown import MarkdownLoader
 from .pdf import PDFLoader
+from .pipeline.loader_pipeline import DocumentLoaderPipeline
 
 __all__ = [
     "DocsLoader",
@@ -12,4 +13,5 @@ __all__ = [
     "TxtLoader",
     "MarkdownLoader",
     "PDFLoader",
+    "DocumentLoaderPipeline"
 ]

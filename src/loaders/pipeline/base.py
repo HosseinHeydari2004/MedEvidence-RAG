@@ -131,7 +131,7 @@ class BasePipelineLoader(ABC):
         return pathlib.Path(path).suffix.lower() == ".zip"
 
     def _load_directory(self, path: pathlib.Path | str) -> list[Document]:
-        path
+        pass
 
 
     def load_zip(self, path: pathlib.Path | str) -> list[Document]:
