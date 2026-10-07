@@ -80,4 +80,5 @@ class CsvLoader(BaseLoader):
             file_path=path,
             autodetect_encoding=True
         )
-        return loader.load()
+        docs = loader.load()
+        return docs
