@@ -1,4 +1,4 @@
-from ..schemas.metadata import DocumentMetadata
+from schemas.metadata import DocumentMetadata
 from langchain_core.documents import Document
 from langchain.chat_models import init_chat_model
 from dotenv import load_dotenv
