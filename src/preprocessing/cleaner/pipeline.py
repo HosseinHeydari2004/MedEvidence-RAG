@@ -16,5 +16,5 @@ class CleanerPipeline(BaseCleaner):
 
     def clean(self, text: str) -> str:
         for cleaner in self.cleaners:
-            text = cleaner.clean(text)
+            text = cleaner.clean(text=text)
         return text

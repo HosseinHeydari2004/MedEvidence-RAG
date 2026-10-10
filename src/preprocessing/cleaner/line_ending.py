@@ -5,5 +5,6 @@ import re
 class LineEndingCleaner(BaseCleaner):
     _LINE_ENDING_RE = re.compile(r"\r\n|\r")
 
-    def clean(self, cls, *, text: str) -> str:
-        text = cls._LINE_ENDING_RE.sub("\n", text)
+    def clean(self,  text: str) -> str:
+        text = self._LINE_ENDING_RE.sub("\n", text)
+        return text
